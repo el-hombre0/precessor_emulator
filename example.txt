@@ -1,0 +1,14 @@
+section .data  
+5 9 2 3 4 255
+
+section .start
+MOV ECX [0] 
+
+section .loop
+MOV EDX [ECX] 
+ADD EBX EDX 
+MOV EDX 0 
+ADC EAX EDX 
+DEC ECX
+JNZ ECX loop
+HLT 
